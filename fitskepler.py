@@ -1,6 +1,8 @@
 from astropy.io import fits
 import matplotlib.pyplot as plt
 import numpy as np
+import glob
+import pickle
 
 def readandplot(path):
 	hdu_list = fits.open(path)
@@ -10,5 +12,9 @@ def readandplot(path):
 
 	plt.scatter(time,flux)
 	plt.show()
+no=glob.glob("/media/petrichor/data/bigdatafiles/public_c1_long_1/*")
+print(len(no))
+yes=glob.glob("/media/petrichor/data/bigdatafiles/public_c1_long_2/*")
+print(len(yes))
 
-readandplot("/media/petrichor/data/bigdatafiles/public_c1_long_2/ktwo201201917-c01_llc.fits")
+#readandplot("/media/petrichor/data/bigdatafiles/public_c1_long_2/ktwo201201917-c01_llc.fits")
